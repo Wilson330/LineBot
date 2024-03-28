@@ -369,7 +369,7 @@ def callback(request):
                 else:
                     textInput = "NotText"
                 
-                # 管理用戶狀態 ["initial_state", "registering_state", "raising_state", "adding_state", "modifying_state"]
+                # 管理用戶狀態 ["initial_state", "registering_state", "raising_state", "adding_state", "modifying_state", "finishing_state"]
                 # 優先處理會員註冊
                 isRegisteredUser = UserProfile.objects.filter(user_id=user_id).exists()
                 if not isRegisteredUser and not textInput == "註冊會員":
